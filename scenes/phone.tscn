@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://yfk35upmxn7d"]
+
+[ext_resource type="Texture2D" uid="uid://cc70cqp6obgmf" path="res://sprites/smartphone.png" id="1_04mx8"]
+[ext_resource type="Script" path="res://scripts/phone.gd" id="1_f6f21"]
+[ext_resource type="Texture2D" uid="uid://cc8p1ugkk1std" path="res://sprites/call.png" id="3_6mww7"]
+[ext_resource type="AudioStream" uid="uid://cd8vte6byl2eb" path="res://sfx/phone-ringtone-home-280348.mp3" id="4_nivvo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n1ief"]
+size = Vector2(52, 98)
+
+[node name="phone" type="Node2D"]
+script = ExtResource("1_f6f21")
+
+[node name="Smartphone" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_04mx8")
+
+[node name="Apps" type="Node2D" parent="Smartphone"]
+visible = false
+
+[node name="Call" type="Sprite2D" parent="Smartphone/Apps"]
+position = Vector2(0, -4)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_6mww7")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 20.0
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_n1ief")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_nivvo")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

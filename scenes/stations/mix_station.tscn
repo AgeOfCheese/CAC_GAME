@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1jvjkdgex3eg"]
+
+[ext_resource type="Texture2D" uid="uid://bmscndgitavim" path="res://sprites/fridge_closed.png" id="1_2fpct"]
+[ext_resource type="Script" path="res://scripts/mix_station.gd" id="1_7msjp"]
+[ext_resource type="Texture2D" uid="uid://1bfhxy6mir38" path="res://sprites/milk_jug.png" id="2_rqwl8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ftr1n"]
+size = Vector2(224, 408)
+
+[node name="MixStation" type="Node2D"]
+script = ExtResource("1_7msjp")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.942226, 0.880832, 0.692169, 1)
+
+[node name="Counter" type="ColorRect" parent="."]
+modulate = Color(0.308164, 0.207978, 0.0658948, 1)
+offset_top = 496.0
+offset_right = 1152.0
+offset_bottom = 648.0
+metadata/_edit_lock_ = true
+
+[node name="MilkJug" type="Sprite2D" parent="."]
+position = Vector2(760, 464)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_rqwl8")
+
+[node name="Fridge" type="Area2D" parent="."]
+position = Vector2(992, 368)
+
+[node name="FrideSprite" type="Sprite2D" parent="Fridge"]
+texture = ExtResource("1_2fpct")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fridge"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_ftr1n")
+
+[connection signal="input_event" from="Fridge" to="." method="_on_fridge_input_event"]

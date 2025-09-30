@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dl4n1yfw2eovi"]
+
+[ext_resource type="Texture2D" uid="uid://nm425kgf7sy4" path="res://sprites/wallet.png" id="1_ek1bb"]
+[ext_resource type="Script" path="res://scripts/wallet.gd" id="1_uo3ps"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h55g1"]
+size = Vector2(97, 115)
+
+[node name="wallet" type="Node2D"]
+script = ExtResource("1_uo3ps")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2, -1)
+shape = SubResource("RectangleShape2D_h55g1")
+
+[node name="Wallet" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_ek1bb")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]

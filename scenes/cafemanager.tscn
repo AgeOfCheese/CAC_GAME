@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://nlh0eyjkpbsx"]
+
+[ext_resource type="Script" path="res://scripts/cafemanager.gd" id="1_kmqcl"]
+
+[node name="Cafemanager" type="Node2D"]
+script = ExtResource("1_kmqcl")
