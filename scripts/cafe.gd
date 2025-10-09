@@ -42,10 +42,18 @@ func create_order() -> Array:
 	for i in range(5):
 		var idx = randi_range(0, len(order_param[keys[i]]))
 		order.append(order.get(keys[i], idx))
-	Cafemanager.orderss.append(order)
+	#Cafemanager.orderss.append(order)
 	return order
-	
 
+func getmessages():
+	var file = FileAccess.open("poopoop.json", FileAccess.READ)
+	var json_string = file.get_as_text()
+	file.close()
+
+	var json = JSON.new()
+	var parse_result = json.parse(json_string)
+	var data = json.data
+	print(data["easy"])
 	
 func _on_timer_timeout():
 	# Remove any existing order labels from the scene

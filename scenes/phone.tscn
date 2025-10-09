@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://yfk35upmxn7d"]
+[gd_scene load_steps=7 format=3 uid="uid://yfk35upmxn7d"]
 
 [ext_resource type="Texture2D" uid="uid://cc70cqp6obgmf" path="res://sprites/smartphone.png" id="1_04mx8"]
 [ext_resource type="Script" path="res://scripts/phone.gd" id="1_f6f21"]
 [ext_resource type="Texture2D" uid="uid://cc8p1ugkk1std" path="res://sprites/call.png" id="3_6mww7"]
 [ext_resource type="AudioStream" uid="uid://cd8vte6byl2eb" path="res://sfx/phone-ringtone-home-280348.mp3" id="4_nivvo"]
+[ext_resource type="Texture2D" uid="uid://dd13k8gorpi48" path="res://icon.svg" id="4_w0dfe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n1ief"]
 size = Vector2(52, 98)
@@ -16,12 +17,24 @@ scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_04mx8")
 
 [node name="Apps" type="Node2D" parent="Smartphone"]
-visible = false
 
-[node name="Call" type="Sprite2D" parent="Smartphone/Apps"]
+[node name="Call" type="Node2D" parent="Smartphone/Apps"]
+
+[node name="CallSprite" type="Sprite2D" parent="Smartphone/Apps/Call"]
 position = Vector2(0, -4)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_6mww7")
+
+[node name="Label" type="Label" parent="Smartphone/Apps/Call"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "skibidi on"
+
+[node name="TextureButton" type="TextureButton" parent="Smartphone/Apps/Call"]
+offset_right = 128.0
+offset_bottom = 128.0
+scale = Vector2(0.680001, 0.84)
+texture_normal = ExtResource("4_w0dfe")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 20.0

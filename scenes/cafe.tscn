@@ -42,7 +42,5 @@ texture = ExtResource("4_35qci")
 position = Vector2(576, 429.625)
 scale = Vector2(0.403433, 0.438393)
 texture = ExtResource("1_vb8no")
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="Timer" type="Timer" parent="."]

@@ -1,0 +1,304 @@
+{
+  "easy": [
+	{
+	  "id": "(561) 903-4421",
+	  "type": "call",
+	  "caller_id": "⚠️ Spam Risk",
+	  "dialogue": [
+		"1 Hello, this is Amazon Prime customer service calling about suspicious activity on your account.",
+		"2 We've detected three unauthorized purchases totaling $847 from your business account.",
+		"3 To cancel these charges and secure your account, I'll need you to verify your payment information.",
+		"4 What's the 16-digit number on the card you have on file with us?"
+	  ],
+	  "red_flags": ["Spam Risk label", "Amazon doesn't cold call", "Asks for full card number", "Creates urgency with fake charges"],
+	  "clues_real": "Caller ID literally says SPAM. Amazon emails first and never asks for payment info over calls.",
+	  "correct_action": "Hang up immediately. Check your actual Amazon account by logging in yourself."
+	},
+	{
+	  "id": "(281) 447-8832",
+	  "type": "text",
+	  "caller_id": "Unknown",
+	  "dialogue": [
+		"1 URGENT: Your café's health inspection failed!",
+		"2 Pay $450 fine within 2 HOURS or face immediate closure.",
+		"3 Send payment to CashApp: $HealthDeptWW",
+		"4 Reply PAID when complete."
+	  ],
+	  "red_flags": ["All caps urgency", "Unrealistic 2-hour deadline", "CashApp for government fine", "No inspection details or case number"],
+	  "clues_real": "Health departments send certified mail for violations, never text with CashApp demands.",
+	  "correct_action": "Ignore completely. Call your local health department directly if concerned."
+	},
+	{
+	  "id": "(702) 634-9108",
+	  "type": "call",
+	  "caller_id": "IRS Collection Agency",
+	  "dialogue": [
+		"1 This is Officer badge number 4729 from the IRS Criminal Investigation Division.",
+		"2 You have an outstanding tax debt of $3,200 that has gone to warrant status.",
+		"3 Local police will arrive at your business within the hour to arrest you unless you pay immediately.",
+		"4 I can accept payment via Zelle, Venmo, or Target gift cards to resolve this right now."
+	  ],
+	  "red_flags": ["Fake badge number", "Immediate arrest threat", "Gift card payment option", "Officer title for IRS"],
+	  "clues_real": "IRS NEVER calls first, threatens arrest, or accepts gift cards. They only contact by mail initially.",
+	  "correct_action": "Hang up and report to the actual IRS and FTC."
+	},
+	{
+	  "id": "(619) 772-3304",
+	  "type": "text",
+	  "caller_id": "+1 (619) 772-3304",
+	  "dialogue": [
+		"1 Hi! 👋 You've been selected for a $5,000 small business grant!",
+		"2 Click here to claim: bit.ly/biz-grant-7829x",
+		"3 Limited to first 50 businesses. Claim expires in 4 hours! ⏰💰"
+	  ],
+	  "red_flags": ["Unsolicited grant offer", "Shortened suspicious link", "Artificial urgency", "Too good to be true amount"],
+	  "clues_real": "Real grants require applications. Bit.ly links from unknown numbers are classic phishing.",
+	  "correct_action": "Delete immediately. Real grants come through official channels you applied to."
+	}
+  ],
+
+  "medium": [
+	{
+	  "id": "(312) 789-2240",
+	  "type": "text",
+	  "caller_id": "True North Coffee Co.",
+	  "dialogue": [
+		"1 Hey! Your Kenyan AA beans (15 lbs) will arrive Friday morning around 9 AM.",
+		"2 Reminder: Invoice #TN-394 for $340 is due Monday the 30th.",
+		"3 Same bank transfer details as last month. Let me know if you need me to resend them.",
+		"4 - Jess"
+	  ],
+	  "red_flags": [],
+	  "clues_real": "Specific order details, reasonable invoice number format, polite reminder tone, offers to help rather than demanding.",
+	  "correct_action": "Mark as REAL. Verify invoice in your email and pay through your normal system."
+	},
+	{
+	  "id": "(503) 276-4412",
+	  "type": "call",
+	  "caller_id": "Greenway Dairy Farms",
+	  "dialogue": [
+		"1 Hi, this is Carla from Greenway calling about your Tuesday delivery.",
+		"2 Our refrigerated truck broke down, so your oat milk and cream will be delayed until Thursday.",
+		"3 Really sorry about this. We'll automatically apply a $50 credit to your next invoice as an apology.",
+		"4 You don't need to do anything—just wanted to give you a heads up so you can plan inventory."
+	  ],
+	  "red_flags": [],
+	  "clues_real": "Reasonable explanation, automatic credit (no payment info requested), apologetic tone, helps you plan ahead.",
+	  "correct_action": "Mark as REAL. Thank them and adjust your inventory planning."
+	},
+	{
+	  "id": "(415) 221-3087",
+	  "type": "call",
+	  "caller_id": "FreshBrite Cleaning",
+	  "dialogue": [
+		"1 Hey, it's Marcus from FreshBrite confirming the deep clean for next Tuesday at 7 PM after you close.",
+		"2 Same as always—$140 for the full service. You can just add it to your monthly invoice or pay cash on the day.",
+		"3 We'll hit the espresso machine area extra hard like you asked last time."
+	  ],
+	  "red_flags": [],
+	  "clues_real": "References past conversation, normal payment options, professional consistency, no pressure.",
+	  "correct_action": "Mark as REAL. Add to your calendar and confirm you'll leave the back door unlocked."
+	},
+	{
+	  "id": "(206) 445-8871",
+	  "type": "text",
+	  "caller_id": "Unknown",
+	  "dialogue": [
+		"1 Your business internet service will be suspended in 24 hours due to unpaid bill.",
+		"2 Amount owed: $287.50",
+		"3 Pay now to avoid disruption: westwood-internet-billing.com/pay-now",
+		"4 Reference code: WW-8821-B"
+	  ],
+	  "red_flags": ["Generic 'business internet service' (doesn't name your actual provider)", "Suspicious URL (real providers use their official domain)", "24-hour threat tactic"],
+	  "clues_real": "Your real ISP would use their actual name and official website. This domain is a fake lookalike.",
+	  "correct_action": "Mark as SCAM. Log into your actual ISP account directly or call them using the real number on your bill."
+	},
+	{
+	  "id": "(347) 902-5541",
+	  "type": "call",
+	  "caller_id": "Westwood Water & Power",
+	  "dialogue": [
+		"1 This is an automated message from Westwood Utilities.",
+		"2 Our records show a past-due balance on your commercial account.",
+		"3 Press 1 to speak with billing immediately to avoid service interruption.",
+		"4 Press 2 to make an immediate payment."
+	  ],
+	  "red_flags": ["Vague 'past-due' with no amount", "Pushy automated options", "Generic 'Westwood Utilities' vs your actual provider name"],
+	  "clues_real": "Real utility companies send multiple paper bills before calling, and don't use aggressive robo-calls.",
+	  "correct_action": "Mark as SCAM. Hang up and check your actual utility account online."
+	}
+  ],
+
+  "hard": [
+	{
+	  "id": "(212) 918-6024",
+	  "type": "call",
+	  "caller_id": "Westwood Business Licensing",
+	  "dialogue": [
+		"1 Good morning, this is Inspector Janet Flores from the City of Westwood Business Licensing Department.",
+		"2 I'm calling to remind you that your annual health permit renewal is due by October 5th.",
+		"3 The renewal fee is $75 and must be paid through the official city portal at westwood.gov/permits.",
+		"4 Please don't attempt to pay over the phone—we only accept payments through the secure government website.",
+		"5 Do you have any questions about the renewal process?"
+	  ],
+	  "red_flags": [],
+	  "clues_real": "Official .gov domain, explicitly tells you NOT to pay by phone, professional tone, offers to answer questions, reasonable fee.",
+	  "correct_action": "Mark as REAL. Thank them and pay only through the official westwood.gov website."
+	},
+	{
+	  "id": "(315) 420-6582",
+	  "type": "call",
+	  "caller_id": "First National Bank - Fraud",
+	  "dialogue": [
+		"1 This is the fraud prevention team at First National Bank. We've detected unusual activity on your business checking account.",
+		"2 There's a pending wire transfer of $2,400 to an account in the Philippines that we flagged.",
+		"3 For security purposes, I need you to verify your identity by providing your online banking password.",
+		"4 Once verified, we can immediately block this transaction."
+	  ],
+	  "red_flags": ["Asks for password directly", "High-pressure fraud scenario", "Claims they can 'block' transaction if you comply"],
+	  "clues_real": "Banks NEVER ask for passwords. They can block transactions without your password—that's literally their job.",
+	  "correct_action": "Mark as SCAM. Hang up immediately and call your bank using the number on the back of your card."
+	},
+	{
+	  "id": "(208) 573-5507",
+	  "type": "call",
+	  "caller_id": "Farmers Market - Leo",
+	  "dialogue": [
+		"1 Hey! Leo here from the Westwood Farmers Market coordination team.",
+		"2 Just confirming your booth space for this Saturday—we're all set with spot B-7 like usual.",
+		"3 We'll have that new vinyl banner you ordered delivered to your booth before opening.",
+		"4 Quick reminder that your $85 monthly vendor fee is due Friday through the online portal at westwoodfm.org.",
+		"5 See you Saturday morning!"
+	  ],
+	  "red_flags": [],
+	  "clues_real": "References specific booth number, mentions your custom banner order, normal vendor fee, directs to official portal, casual but professional.",
+	  "correct_action": "Mark as REAL. Pay through the official market portal and confirm you'll be there Saturday."
+	},
+	{
+	  "id": "(832) 722-4940",
+	  "type": "text",
+	  "caller_id": "⚠️ WebSecure Alert",
+	  "dialogue": [
+		"1 CRITICAL: Your domain westwood-cafe.com has been blacklisted by Google!",
+		"2 Your site is currently showing malware warnings to all visitors.",
+		"3 Immediate action required: Login here to verify ownership and restore: cafe-secure-portal.info/verify",
+		"4 Failure to verify within 12 hours will result in permanent domain suspension."
+	  ],
+	  "red_flags": ["Suspicious .info domain (real hosts use .com or their own domain)", "Extreme urgency language", "Login link from unknown source", "Threatening 'permanent suspension'"],
+	  "clues_real": "Your real web host emails from their official domain and has a dashboard you access directly. .info sites are red flags.",
+	  "correct_action": "Mark as SCAM. Log into your actual hosting account directly (not through any link) to check status."
+	},
+	{
+	  "id": "(425) 788-2193",
+	  "type": "call",
+	  "caller_id": "POS System Support",
+	  "dialogue": [
+		"1 Hi, this is Derek from Square support. We're reaching out about a critical security update for your point-of-sale system.",
+		"2 There's a payment processing vulnerability that was discovered yesterday affecting Square terminals.",
+		"3 I can walk you through installing the security patch right now—it'll only take 5 minutes.",
+		"4 I'll just need remote access to your tablet to push the update. Can you download TeamViewer real quick?"
+	  ],
+	  "red_flags": ["Unsolicited 'critical update' call", "Requests remote access software", "Creates urgency with fake vulnerability", "Real companies push updates automatically"],
+	  "clues_real": "Square and similar companies push updates automatically through their app. They never call requesting remote access.",
+	  "correct_action": "Mark as SCAM. Hang up and check for real updates in your actual Square app or dashboard."
+	},
+	{
+	  "id": "(512) 334-6751",
+	  "type": "text",
+	  "caller_id": "Sysco Foodservice",
+	  "dialogue": [
+		"1 Hi, this is Ramon from Sysco. We're updating our payment systems next week.",
+		"2 To keep your account active, please verify your banking info by clicking: sysco-vendor-update.com/verify-account",
+		"3 You'll need to re-enter your routing and account numbers by Friday.",
+		"4 Thanks for your business!"
+	  ],
+	  "red_flags": ["Suspicious domain (real Sysco uses sysco.com)", "Requests banking info through external link", "Artificial Friday deadline"],
+	  "clues_real": "Real payment system updates are handled through official portals you already use. They don't send verification links via text.",
+	  "correct_action": "Mark as SCAM. Contact your actual Sysco rep directly using a known good number if you're concerned."
+	},
+	{
+	  "id": "(720) 445-9032",
+	  "type": "call",
+	  "caller_id": "Coffee Equipment Maintenance",
+	  "dialogue": [
+		"1 Hi there! This is Brenda calling about the warranty on your espresso machine.",
+		"2 Our records show it's about to expire and you'll lose coverage.",
+		"3 I can extend it for another 3 years for just $299 if you pay today.",
+		"4 After today the price goes up to $450. Can I get your card number?"
+	  ],
+	  "red_flags": ["Unsolicited warranty call", "Today-only pressure pricing", "Asks for card over phone", "You probably don't even have a warranty"],
+	  "clues_real": "You'd remember if you bought a warranty. Extended warranty scams are super common. Legit companies send mail first.",
+	  "correct_action": "Mark as SCAM. Hang up. Check your actual machine's paperwork if you're curious about warranty."
+	},
+	{
+	  "id": "(904) 267-1138",
+	  "type": "text",
+	  "caller_id": "Sarah - Westwood Times",
+	  "dialogue": [
+		"1 Hey! I'm Sarah from Westwood Times writing a feature on local cafés.",
+		"2 Would love to include your spot. Can we do a quick 15-min call this week?",
+		"3 Here's my article from last month: [legitimate news site link]",
+		"4 Let me know what day works! ☕"
+	  ],
+	  "red_flags": [],
+	  "clues_real": "Friendly tone, reasonable request, provides actual credential (article link), no money/info requested, casual follow-up.",
+	  "correct_action": "Mark as REAL. This is just normal press outreach. Reply if interested in the feature!"
+	},
+	{
+	  "id": "(469) 831-5572",
+	  "type": "call",
+	  "caller_id": "Microsoft Support",
+	  "dialogue": [
+		"1 Hello, this is Microsoft technical support. We've detected viruses on your business computer.",
+		"2 Your system is sending us error reports showing critical security breaches.",
+		"3 If we don't fix this now, all your customer data could be stolen by hackers.",
+		"4 I can help you right now. Please go to your computer and press the Windows key plus R."
+	  ],
+	  "red_flags": ["Microsoft never cold calls", "Fear tactics about data theft", "Wants you to give them computer access", "Classic tech support scam"],
+	  "clues_real": "Microsoft doesn't monitor random businesses or call about viruses. This is one of the oldest scams in the book.",
+	  "correct_action": "Mark as SCAM. Hang up immediately. Microsoft NEVER cold calls users."
+	},
+	{
+	  "id": "(336) 574-2891",
+	  "type": "text",
+	  "caller_id": "Rob - Eclipse Roasters",
+	  "dialogue": [
+		"1 Hey! Rob from Eclipse. We met at the trade show last month.",
+		"2 Wanted to follow up—still interested in sampling our Colombian blend?",
+		"3 I can drop off a 2lb bag this Thursday if you're around.",
+		"4 No charge, just want to get your feedback 👍"
+	  ],
+	  "red_flags": [],
+	  "clues_real": "References specific meeting, offers free sample (normal sales tactic), low-pressure, no payment or personal info requested.",
+	  "correct_action": "Mark as REAL. This is just normal business development. Accept the sample if you're interested!"
+	},
+	{
+	  "id": "(801) 392-6683",
+	  "type": "call",
+	  "caller_id": "Unknown",
+	  "dialogue": [
+		"1 Hi, I'm calling from the Small Business Administration about your loan application.",
+		"2 Good news—you've been approved for up to $50,000!",
+		"3 There's just a small processing fee of $500 we need upfront to release the funds.",
+		"4 You can pay that with a credit card right now and we'll transfer your loan by tomorrow."
+	  ],
+	  "red_flags": ["You never applied for a loan", "Upfront fee for loan is a classic scam", "Too good to be true amount", "Immediate payment pressure"],
+	  "clues_real": "Legitimate loans NEVER require upfront fees. The SBA doesn't cold call with instant approvals. This is a common scam.",
+	  "correct_action": "Mark as SCAM. Hang up. Real SBA loans go through banks and require actual applications you'd remember."
+	},
+	{
+	  "id": "(617) 284-1095",
+	  "type": "text",
+	  "caller_id": "Jenkins & Sons HVAC",
+	  "dialogue": [
+		"1 Morning! Annual AC maintenance is coming up.",
+		"2 We have availability next Tuesday 10 AM or Thursday 2 PM.",
+		"3 Same $180 service rate. Reply with your preferred time.",
+		"4 Thanks! - Mike"
+	  ],
+	  "red_flags": [],
+	  "clues_real": "Normal appointment scheduling, reasonable pricing, gives you options, simple confirmation request, professional but casual.",
+	  "correct_action": "Mark as REAL. Check your records to confirm you use this company, then reply with your preferred time."
+	}
+  ]
+}
