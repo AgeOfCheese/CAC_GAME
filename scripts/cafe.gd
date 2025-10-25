@@ -1,5 +1,5 @@
 extends Node2D
-#ducks si sisisisisis yes
+#ducks
 @onready var customer_timer = $Timer
 
 var min_customer_appearance_time = 10
@@ -41,7 +41,8 @@ func create_order() -> Array:
 	print(keys)
 	for i in range(5):
 		var idx = randi_range(0, len(order_param[keys[i]]))
-		order.append(order.get(keys[i], idx))
+		order.append(order_param.get(keys[i])[idx])
+		print(order)
 	#Cafemanager.orderss.append(order)
 	return order
 
@@ -71,17 +72,27 @@ func _on_timer_timeout():
 	add_child(new_customer)'''
 	
 	var new_customer = customer_scene.instantiate()
-	new_customer.sprite
+	if new_customer.get_child(0).name == "Sprite2D":
+		print("skbidi debug")
+		new_customer.get_child(0).texture = load("res://icon.svg")
+		new_customer.position = get_viewport_rect().get_center()
+		new_customer.order = create_order()
+	if(new_customer.has_signal("speech_triggered")):
+		new_customer.connect("speech_triggered", trigger_customer_speech.bind(new_customer))
+	$customers.add_child(new_customer)
 	
 	# Create and add the order label above the customer
-	var order_label = Label.new()
+	'''var order_label = Label.new()
 	#order_label.text = orders[randi() % orders.size()]
-	order_label.add_theme_font_size_override("font_size", 64)
+	order_label.add_theme_font_size_override("font_size", 64)	
 	order_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	order_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	order_label.position = new_customer.position + Vector2(-130, -100)
-	add_child(order_label)
+	add_child(order_label)'''
 	
 	# Mark that a customer has arrived
 	customer_arriving = false
 	num_customers_current += 1
+func trigger_customer_speech(nodePressed: Node):
+	if nodePressed.has_signal("speech_triggered"):
+		print(nodePressed.order)

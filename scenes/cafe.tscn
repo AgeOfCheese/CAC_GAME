@@ -44,3 +44,5 @@ scale = Vector2(0.403433, 0.438393)
 texture = ExtResource("1_vb8no")
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="customers" type="Node2D" parent="."]

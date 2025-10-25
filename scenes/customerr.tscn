@@ -1,8 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://dmlrhlpp12fa0"]
+[gd_scene load_steps=3 format=3 uid="uid://dmlrhlpp12fa0"]
 
 [ext_resource type="Script" path="res://scripts/customerr.gd" id="1_4a3tj"]
+[ext_resource type="Texture2D" uid="uid://nm425kgf7sy4" path="res://sprites/wallet.png" id="2_3n7lo"]
 
 [node name="Customerr" type="Node2D"]
 script = ExtResource("1_4a3tj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 20.0
+offset_top = -100.0
+offset_right = 474.0
+offset_bottom = 449.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("2_3n7lo")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
