@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1bfhxy6mir38"
-path="res://.godot/imported/milk_jug.png-1a9e2ada0420286e5ebbddd3a9a32665.ctex"
+uid="uid://tx6x13ao71s1"
+path="res://.godot/imported/CAFE-TILES.png-7a3b61986ec71babbff5519e59b8c453.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/milk_jug.png"
-dest_files=["res://.godot/imported/milk_jug.png-1a9e2ada0420286e5ebbddd3a9a32665.ctex"]
+source_file="res://sprites/CAFE-TILES.png"
+dest_files=["res://.godot/imported/CAFE-TILES.png-7a3b61986ec71babbff5519e59b8c453.ctex"]
 
 [params]
 
